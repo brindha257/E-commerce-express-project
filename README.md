@@ -8,19 +8,19 @@ Users can browse products, filter by category, search items, and manage a dynami
 
 Features
 
- --Search & Filter-Real-time search bar to filter products by name
- Category filter buttons: Electronics, Fashion, Grocery, All
- --Shopping Cart
- Add items to cart instantly
- Auto-updated cart count
- Slide-in cart sidebar
- Displays product list + total amount
- Remove items (logic available in JS)
- Checkout popup message
- --Responsive UI
- --Modern grid layout
- --Smooth hover effects
- --Mobile-friendly design
+  --Search & Filter-Real-time search bar to filter products by name
+   Category filter buttons: Electronics, Fashion, Grocery, All
+  --Shopping Cart
+  Add items to cart instantly
+  Auto-updated cart count
+  Slide-in cart sidebar
+  Displays product list + total amount
+  Remove items (logic available in JS)
+  Checkout popup message
+  --Responsive UI
+  --Modern grid layout
+   --Smooth hover effects
+  --Mobile-friendly design
 
  Tech Stack
 
