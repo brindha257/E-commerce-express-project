@@ -1,0 +1,206 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f9f4; /* light pista background */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #FFA2A2, #FFE2E2);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo { font-size: 1.8rem; font-weight: 600; }
+.navbar input {
+  padding: 10px;
+  width: 40%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  background: #fff;
+  color:  #FFA2A2;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.cart-icon:hover { background: #e8f5e9; }
+
+/* Categories */
+.categories {
+  text-align: center;
+  margin: 25px 0;
+}
+.categories button {
+      padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  background:  #FFA2A2;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.categories button:hover {
+  background: #FFE2E2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Products Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px 40px;
+}
+.product {
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.product h3 { font-size: 1.1rem; margin: 10px 0; }
+.product p { font-size: 1rem; font-weight: 600; color: #2e7d32; }
+.product button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #FFA2A2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.product button:hover {
+  background: #FFE2E2;
+  transform: scale(1.05);
+}
+
+/* Cart Sidebar */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -380px;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  border-left: 3px solid #FFE2E2;
+  box-shadow: -6px 0 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+#cart-sidebar.active { right: 0; }
+
+#cart-sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color:  #FFA2A2;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  text-align: center;
+}
+/* Close button */
+#close-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background:  #FFA2A2;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+#close-cart:hover {
+  background: #FFE2E2;
+  transform: rotate(90deg);
+}
+
+/* Cart items */
+#cart-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+#cart-sidebar li {
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #f1f8f4;
+  border-radius: 8px;
+}
+#cart-sidebar li button {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#cart-sidebar li button:hover { transform: scale(1.2); }
+
+/* Cart total and checkout */
+#cart-sidebar h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: right;
+  color:  #FFA2A2;
+}
+#cart-sidebar button:last-of-type {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background:#FFE2E2;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#cart-sidebar button:last-of-type:hover {
+  background:  #FFA2A2;
+}

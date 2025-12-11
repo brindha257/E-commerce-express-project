@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modern E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <h1 class="logo">ShopZone</h1>
+        <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <section class="categories">
+        <button onclick="filterCategory('all')">All</button>
+        <button onclick="filterCategory('electronics')">Electronics</button>
+        <button onclick="filterCategory('fashion')">Fashion</button>
+        <button onclick="filterCategory('grocery')">Grocery</button>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="product-list">
+        <div class="product" data-category="electronics">
+            <img src="./images/laptop.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>$999</p>
+            <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="fashion">
+            <img src="./images/tshirt.jpg" alt="T-Shirt">
+            <h3>T-Shirt</h3>
+            <p>$20</p>
+            <button onclick="addToCart('T-Shirt', 20)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="fashion">
+            <img src="./images/jeans.jpg" alt="Jeans">
+            <h3>T-Shirt</h3>
+            <p>$20</p>
+            <button onclick="addToCart('Jeans', 20)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="grocery">
+            <img src="./images/Chocolate.jpg" alt="Chocolates">
+            <h3>Chocolates</h3>
+            <p>$5</p>
+            <button onclick="addToCart('Chocolates', 5)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="electronics">
+            <img src="./images/headphones.jpg" alt="Headphones">
+            <h3>Headphones</h3>
+            <p>$49</p>
+            <button onclick="addToCart('Headphones', 49)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="electronics">
+            <img src="./images/iphone.jpg" alt="Iphone">
+            <h3>Iphone</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Iphone', 49)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="grocery">
+            <img src="./images/biscuits.jpg" alt="Biscuits">
+            <h3>Biscuits</h3>
+            <p>$5</p>
+            <button onclick="addToCart('Biscuits', 5)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="grocery">
+            <img src="./images/apples.jpg" alt="Apples">
+            <h3>Apples</h3>
+            <p>$5</p>
+            <button onclick="addToCart('Apples', 5)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="fashion">
+            <img src="./images/Bag.jpg" alt="Bag">
+            <h3>bag</h3>
+            <p>$20</p>
+            <button onclick="addToCart('Bag', 20)">Add to Cart</button>
+        </div>
+        <div class="product" data-category="fashion">
+            <img src="./images/shoes.jpg" alt="shoes">
+            <h3>shoes</h3>
+            <p>$20</p>
+            <button onclick="addToCart('Shoes', 20)">Add to Cart</button>
+        </div>
+    </section>
+    <!-- Cart Sidebar -->
+    <aside id="cart-sidebar">
+        <button id="close-cart" onclick="toggleCart()">❌</button>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total: $<span id="cart-total">0</span></h3>
+        <button onclick="checkout()">Checkout</button>
+    </aside>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
